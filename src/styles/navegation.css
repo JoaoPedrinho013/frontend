@@ -1,0 +1,55 @@
+.navegation_row {
+    width: 75%;
+}
+.ul_navegation_column {
+    width: auto;
+}
+
+.ul_navegation {
+    height: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.ul_navegation_column {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+}
+
+.ul_navegation > li {
+    align-content: center;
+    text-align: center;
+}
+
+.ul_navegation > li > a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2em;
+    transition: color 0.2s ease;
+}
+
+.ul_navegation li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #34B8FF;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.ul_navegation li a:hover::after {
+  transform: scaleX(1);
+}
+
+.ul_navegation li.ativo a {
+  color: #34B8FF;
+  
+}

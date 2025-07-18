@@ -1,0 +1,25 @@
+.footer {
+    background-color: #1e1e1e;
+    padding: 1%;
+    border-top: 2px outset #34B8FF;
+    
+}
+.section_footer {
+    display: flex;
+    justify-content: space-between;
+}
+.footer > .section_footer > a {
+        width: 33%;
+        text-align: center;
+        align-content: center;
+    }
+    .footer > .section_footer > a > img {
+        width: 60%;
+        border-radius: 8px;
+}
+.rights_reserved{
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+
