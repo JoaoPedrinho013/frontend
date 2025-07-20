@@ -1,13 +1,25 @@
 import React from 'react';
+import Select from 'react-select';
+import "../../styles/admin_forms.css";
+import { options_players, options_pokemons, customStyles } from './utils/SelectConfig';
 
-export default function AddPlayerForm() {
+export default function RemovePokemon() {
   return (
-    <div>
-      <h2>Adicionar Jogador</h2>
-      <form>
-        <input type="text" placeholder="Nome do Jogador" />
-        <button type="submit">Adicionar</button>
+    <form className="admin_form">
+        <Select
+        options={options_players}
+        placeholder="Select Player"
+        className="admin_select"
+        styles={customStyles}
+      />
+        <Select
+        options={options_pokemons}
+        placeholder="Select Pokemon"
+        className="admin_select"
+        styles={customStyles}
+      />
+        <button type="submit" className='admin_button'>Remove Pokemon</button>
       </form>
-    </div>
+    
   );
 }
