@@ -10,6 +10,9 @@
     margin-top: 0.5%;
 }
 .logo_panelinha{
-    width: 100%;
+    width: 80%;
+    border-radius: 30px;
+    margin: 2% auto;
     
 };
+

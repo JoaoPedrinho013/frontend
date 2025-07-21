@@ -4,11 +4,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './styles/index.css';
 
 import Header from './components/Header';
-import Shiny_Showcase from './pages/Shiny_Showcase';
+import ShinyShowcase from './pages/Shiny_Showcase';
 import Login from './components/Login';
-import Admin from './components/Admin/Admin_Dashboard'
-import Shiny_Dex from './pages/Shiny_Dex';
-import Shiny_Rare from './pages/Shiny_Rare';
+import Admin from './components/Admin/AdminTable.tsx'
+import ShinyDex from './pages/Shiny_Dex';
+import ShinyRare from './pages/Shiny_Rare';
 import Footer from './components/Footer';
 
 
@@ -18,9 +18,9 @@ root.render(
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Shiny_Showcase />} />
-        <Route path="/shiny-dex" element={<Shiny_Dex />} />
-        <Route path="/shiny-rare" element={<Shiny_Rare />} />
+        <Route path="/" element={<ShinyShowcase />} />
+        <Route path="/shiny-dex" element={<ShinyDex />} />
+        <Route path="/shiny-rare" element={<ShinyRare />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
