@@ -5,7 +5,7 @@ import {
   type MRT_ColumnDef,
 } from 'material-react-table';
 import { dataPlayer, Player } from './utils/Player.tsx';
-import { dataLastShiny } from './utils/LastShiny.tsx';
+import { dataPlayerPokemon } from './utils/PlayerPokemon.tsx';
 
 type PlayerPokemon = Player & {
   namePokemon?: string;
@@ -13,11 +13,14 @@ type PlayerPokemon = Player & {
 
 export default function AdminTable() {
   const combinedData = useMemo(() => {
-    return dataPlayer.map(player => ({
-      ...player,
-      namePokemon: dataLastShiny.find(pokemon => pokemon.idPlayer === player.idPlayer)?.namePokemon || 'N/A',
-    }));
-  }, []);
+  return dataPlayer.map(player => ({
+    ...player,
+    lastShiny: dataPlayerPokemon.find(pokemon => pokemon.idPlayer === player.idPlayer)?.namePokemon || 'N/A',
+totalShiny: dataPlayerPokemon.filter(pokemon => pokemon.idPlayer === player.idPlayer).length,
+
+  }));
+}, []);
+
 
   const columns = useMemo<MRT_ColumnDef<PlayerPokemon>[]>(
     () => [
@@ -36,8 +39,15 @@ export default function AdminTable() {
         maxSize: 100,
       },
       {
-        accessorKey: 'namePokemon',
-        header: 'Pokemon',
+        accessorKey: 'lastShiny',
+        header: 'LAST SHINY',
+        size: 80,
+        minSize: 60,
+        maxSize: 100,
+      },
+      {
+        accessorKey: 'totalShiny',
+        header: 'TOTAL SHINY',
         size: 80,
         minSize: 60,
         maxSize: 100,
