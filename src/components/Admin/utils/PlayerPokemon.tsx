@@ -8,6 +8,13 @@ export enum CatchMethod {
   MYSTERIOUS = 'Mysterious Ball'
 }
 
+export enum ShinyStatus {
+    OWNED = 'Owned',
+    FLED = 'Fled/Dead',
+    SOLD = 'Sold',
+    BREED = ' Used for Breeding',
+}
+
 export type PlayerPokemon = {
   idPlayer: number;
   idPokemon: number;
@@ -15,6 +22,7 @@ export type PlayerPokemon = {
   captureDate: string; 
   encounters: number; 
   catchMethod: CatchMethod[];
+  shinyStatus: ShinyStatus[];
 };
 
 export const dataPlayerPokemon: PlayerPokemon[] = [
@@ -26,6 +34,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2023-01-01',
     encounters: 48720,
     catchMethod: [CatchMethod.SINGLE],
+    shinyStatus: [ShinyStatus.OWNED],
   },
   {
     idPlayer: 0,
@@ -34,6 +43,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 90314,
     catchMethod: [CatchMethod.EGG],
+    shinyStatus: [ShinyStatus.BREED],
   },
   {
     idPlayer: 0,
@@ -42,6 +52,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2024-05-10',
     encounters: 20001,
     catchMethod: [CatchMethod.FISHING],
+    shinyStatus: [ShinyStatus.FLED],
   },
   {
     idPlayer: 0,
@@ -50,6 +61,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2024-06-12',
     encounters: 32981,
     catchMethod: [CatchMethod.SAFARI],
+    shinyStatus: [ShinyStatus.SOLD],
   },
   {
     idPlayer: 0,
@@ -58,6 +70,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-03-05',
     encounters: 11999,
     catchMethod: [CatchMethod.MYSTERIOUS],
+    shinyStatus: [ShinyStatus.OWNED],
   },
 
   // Red - 4 Pokémon
@@ -68,6 +81,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 77568,
     catchMethod: [CatchMethod.EGG],
+    shinyStatus: [ShinyStatus.BREED],
   },
   {
     idPlayer: 1,
@@ -76,6 +90,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2023-01-02',
     encounters: 45023,
     catchMethod: [CatchMethod.SINGLE],
+    shinyStatus: [ShinyStatus.SOLD],
   },
   {
     idPlayer: 1,
@@ -84,6 +99,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 65902,
     catchMethod: [CatchMethod.SINGLE],
+    shinyStatus: [ShinyStatus.OWNED],
   },
   {
     idPlayer: 1,
@@ -92,6 +108,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-06-11',
     encounters: 32410,
     catchMethod: [CatchMethod.HORDE_3X],
+    shinyStatus: [ShinyStatus.FLED],
   },
 
   // Cynthia - 3 Pokémon
@@ -102,6 +119,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2023-02-01',
     encounters: 23891,
     catchMethod: [CatchMethod.SINGLE],
+    shinyStatus: [ShinyStatus.OWNED],
   },
   {
     idPlayer: 2,
@@ -110,6 +128,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-06-01',
     encounters: 48222,
     catchMethod: [CatchMethod.SAFARI],
+    shinyStatus: [ShinyStatus.FLED],
   },
   {
     idPlayer: 2,
@@ -118,6 +137,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 77568,
     catchMethod: [CatchMethod.EGG],
+    shinyStatus: [ShinyStatus.BREED],
   },
 
   // Lance - 2 Pokémon
@@ -128,6 +148,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 32988,
     catchMethod: [CatchMethod.SINGLE],
+    shinyStatus: [ShinyStatus.OWNED],
   },
   {
     idPlayer: 3,
@@ -136,6 +157,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 99005,
     catchMethod: [CatchMethod.HORDE_3X],
+    shinyStatus: [ShinyStatus.SOLD],
   },
 
   // Brock - 1 Pokémon
@@ -146,6 +168,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 7453,
     catchMethod: [CatchMethod.SAFARI],
+    shinyStatus: [ShinyStatus.OWNED],
   },
 
   // Misty - 3 Pokémon
@@ -156,6 +179,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 6890,
     catchMethod: [CatchMethod.FISHING],
+    shinyStatus: [ShinyStatus.SOLD],
   },
   {
     idPlayer: 5,
@@ -164,6 +188,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 48129,
     catchMethod: [CatchMethod.SINGLE],
+    shinyStatus: [ShinyStatus.OWNED],
   },
   {
     idPlayer: 5,
@@ -172,6 +197,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-04-03',
     encounters: 18743,
     catchMethod: [CatchMethod.FISHING],
+    shinyStatus: [ShinyStatus.BREED],
   },
 
   // Steven - 2 Pokémon
@@ -182,6 +208,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 15732,
     catchMethod: [CatchMethod.MYSTERIOUS],
+    shinyStatus: [ShinyStatus.FLED],
   },
   {
     idPlayer: 6,
@@ -190,6 +217,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 60783,
     catchMethod: [CatchMethod.SINGLE],
+    shinyStatus: [ShinyStatus.SOLD],
   },
 
   // Blue - 1 Pokémon
@@ -200,6 +228,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 84120,
     catchMethod: [CatchMethod.EGG],
+    shinyStatus: [ShinyStatus.BREED],
   },
 
   // Giovanni - 4 Pokémon
@@ -210,6 +239,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 37770,
     catchMethod: [CatchMethod.SINGLE],
+    shinyStatus: [ShinyStatus.OWNED],
   },
   {
     idPlayer: 8,
@@ -218,6 +248,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 11995,
     catchMethod: [CatchMethod.HORDE_3X],
+    shinyStatus: [ShinyStatus.FLED],
   },
   {
     idPlayer: 8,
@@ -226,6 +257,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-06-15',
     encounters: 8910,
     catchMethod: [CatchMethod.SINGLE],
+    shinyStatus: [ShinyStatus.SOLD],
   },
   {
     idPlayer: 8,
@@ -234,6 +266,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-03-08',
     encounters: 23005,
     catchMethod: [CatchMethod.HORDE_5X],
+    shinyStatus: [ShinyStatus.BREED],
   },
 
   // Professor Oak - 2 Pokémon
@@ -244,6 +277,7 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 92143,
     catchMethod: [CatchMethod.SINGLE],
+    shinyStatus: [ShinyStatus.OWNED],
   },
   {
     idPlayer: 9,
@@ -252,5 +286,6 @@ export const dataPlayerPokemon: PlayerPokemon[] = [
     captureDate: '2025-07-22',
     encounters: 23301,
     catchMethod: [CatchMethod.SAFARI],
+    shinyStatus: [ShinyStatus.FLED],
   },
 ];

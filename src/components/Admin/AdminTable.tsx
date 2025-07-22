@@ -13,13 +13,19 @@ type PlayerPokemon = Player & {
 
 export default function AdminTable() {
   const combinedData = useMemo(() => {
-  return dataPlayer.map(player => ({
-    ...player,
-    lastShiny: dataPlayerPokemon.find(pokemon => pokemon.idPlayer === player.idPlayer)?.namePokemon || 'N/A',
-totalShiny: dataPlayerPokemon.filter(pokemon => pokemon.idPlayer === player.idPlayer).length,
+  return dataPlayer.map(player => {
+    const pokemonsDoPlayer = dataPlayerPokemon.filter(pokemon => pokemon.idPlayer === player.idPlayer);
+    
+    const ultimoShiny = pokemonsDoPlayer.at(-1)?.namePokemon || 'N/A';
 
-  }));
+    return {
+      ...player,
+      lastShiny: ultimoShiny,
+      totalShiny: pokemonsDoPlayer.length,
+    };
+  });
 }, []);
+
 
 
   const columns = useMemo<MRT_ColumnDef<PlayerPokemon>[]>(
