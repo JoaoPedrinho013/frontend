@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/frontend/static/css/main.a2c02191.css",
+    "main.css": "/frontend/static/css/main.74d00e55.css",
     "main.js": "/frontend/static/js/main.7c9ea0d4.js",
     "static/media/logo2.png": "/frontend/static/media/logo2.5fbdee8ce56c9279ae31.png",
     "static/media/turma.jpeg": "/frontend/static/media/turma.29c12e9b1272cf7e6168.jpeg",
     "index.html": "/frontend/index.html",
-    "main.a2c02191.css.map": "/frontend/static/css/main.a2c02191.css.map",
+    "main.74d00e55.css.map": "/frontend/static/css/main.74d00e55.css.map",
     "main.7c9ea0d4.js.map": "/frontend/static/js/main.7c9ea0d4.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2c02191.css",
+    "static/css/main.74d00e55.css",
     "static/js/main.7c9ea0d4.js"
   ]
 }
