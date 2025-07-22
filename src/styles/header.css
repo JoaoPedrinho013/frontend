@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     border-bottom: 2px inset #34B8FF;
-    width: 100%;
+    width: 100dvw;
 }
 
 .header a {
